@@ -6,4 +6,5 @@ Gem::Specification.new do |s|
     s.description = 'A fake gem for a pre-commit hook for linting markdown'
     s.add_dependency 'mdl', '0.4.0'
     s.bindir = 'bin'
+    s.executables = 'markdown-lint.rb'
 end
