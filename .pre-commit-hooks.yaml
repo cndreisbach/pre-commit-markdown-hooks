@@ -1,0 +1,6 @@
+-   id: markdown-lint
+    name: Lint Markdown
+    description: This hook ensures Markdown files meet standards.
+    entry: markdown-lint.rb
+    language: ruby
+    files: \.(md|mdown|markdown)$
