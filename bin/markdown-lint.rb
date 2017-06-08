@@ -4,7 +4,7 @@ status = 0
 options = []
 ARGV.each do |arg|
   if arg =~ /^-/
-    options.append arg
+    options.push arg
     next
   end
   output = `mdl #{options.join(' ')} "#{arg}"`
