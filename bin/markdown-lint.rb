@@ -9,7 +9,7 @@ ARGV.each do |arg|
   end
   output = `mdl #{options.join(' ')} "#{arg}"`
   next if $CHILD_STATUS.exitstatus == 0
-  puts "#{file}: failed Markdown validation"
+  puts "#{arg}: failed Markdown validation"
   puts output
   status = 1
 end
