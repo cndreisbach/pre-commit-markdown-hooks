@@ -1,8 +1,13 @@
 require 'English'
 
 status = 0
+options = []
 ARGV.each do |file|
-  output = `mdl "#{file}"`
+  if arg =~ /^-/
+    options.append arg
+    next
+  end
+  output = `mdl #{options.join(' ')} "#{file}"`
   next if $CHILD_STATUS.exitstatus == 0
   puts "#{file}: failed Markdown validation"
   puts output
